@@ -7,48 +7,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
-        .about-header { background: #2c3e50; color: white; padding: 60px 0; }
-        .profile-img { width: 100%; max-width: 300px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .quote-box { border-left: 5px solid #e74c3c; font-style: italic; padding-left: 20px; margin: 30px 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        .profile-img { width: 100%; max-width: 350px; border-radius: 15px; filter: grayscale(20%); }
+        .quote-section {
+            background-color: #f8f9fa;
+            border-left: 8px solid #2c3e50;
+            padding: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        .social-links a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img.png" alt="Logo" width="50"></a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">Tentang Saya</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto flex-row">
+                <li class="nav-item me-3"><a class="nav-link" href="index.html">Proyek</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold text-white" href="about.html">Tentang Saya</a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="foto-kamu.jpg" alt="Partogi Sitinjak" class="profile-img mb-4">
+    <main class="container py-5">
+        <div class="row align-items-start mt-4">
+            <div class="col-md-5 mb-4">
+                <img src="foto-saya.jpg" alt="Foto Partogi Sitinjak" class="profile-img">
+                <p class="text-center mt-2 text-muted">Partogi Sitinjak</p>
             </div>
-            <div class="col-md-8">
-                <h2 class="fw-bold">Tentang Saya</h2>
-                <p>Halo! Saya Partogi. Saya adalah seorang yang memiliki ketertarikan besar di dunia teknologi dan desain grafis. Saat ini saya fokus mengembangkan keahlian dalam web development dan pembuatan konten kreatif.</p>
-                <p>Bagi saya, teknologi bukan hanya tentang kode, tapi bagaimana cara kita menyampaikan pesan dan mempermudah kehidupan orang lain melalui solusi digital yang estetik dan fungsional.</p>
-                
-                <div class="quote-box">
-                    <h4>"Kreativitas adalah kecerdasan yang sedang bersenang-senang."</h4>
-                </div>
-
-                <h5 class="fw-bold mt-4">Media Sosial</h5>
-                <a href="LINK_INSTAGRAM" class="btn btn-outline-dark me-2">Instagram</a>
-                <a href="LINK_LINKEDIN" class="btn btn-outline-dark">LinkedIn</a>
+            
+            <div class="col-md-7">
+                <h2 class="fw-bold mb-4">Tentang saya</h2>
+                <p class="text-secondary" style="line-height: 1.8;">
+                    Halo! Nama saya Partogi. Saya adalah seorang Design Enthusiast dan Tech Hobbyist yang senang mengeksplorasi dunia kreatif digital. Fokus utama saya saat ini adalah membangun solusi web yang fungsional namun tetap memiliki nilai estetika yang tinggi. Melalui pengalaman saya dalam web development dan pembuatan konten, saya berusaha untuk terus belajar dan beradaptasi dengan perkembangan teknologi terbaru.
+                </p>
             </div>
         </div>
-    </div>
 
-    <footer class="text-center py-4 border-top">
+        <div class="quote-section">
+            "Kreativitas adalah kecerdasan yang sedang bersenang-senang. Saya percaya bahwa setiap baris kode dan setiap desain grafis memiliki cerita yang ingin disampaikan."
+        </div>
+
+        <div class="mt-5">
+            <h5 class="fw-bold">Media Sosial</h5>
+            <div class="social-links mt-3">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-5 border-top mt-5">
         <p class="text-muted">&copy; 2026 Partogi Sitinjak. Built with Bootstrap.</p>
     </footer>
 
