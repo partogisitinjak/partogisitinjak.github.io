@@ -11,23 +11,22 @@
         .hero-section {
             background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
         }
-        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .navbar-brand img { width: 50px; height: auto; }
+        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; }
         .card:hover { transform: translateY(-10px); }
-        .nav-link.active { font-weight: bold; color: #fff !important; }
+        .project-img-placeholder { background: #ddd; height: 150px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #666; }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img.png" alt="Logo" width="50">
-            </a>
+            <a class="navbar-brand" href="index.html"><img src="img.png" alt="Logo"></a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Proyek</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
                 </ul>
             </div>
@@ -48,42 +47,40 @@
             <div class="row g-4">
                 
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Sistem Informasi Perpustakaan</h5>
-                            <p class="card-text small">Proyek Kuliah: Mengembangkan aplikasi manajemen berbasis web dengan PHP, MySQL, dan optimasi AI secara mandiri.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-secondary">PHP</span>
-                                <span class="badge bg-secondary">MySQL</span>
-                                <span class="badge bg-secondary">AI Development</span>
-                            </div>
-                            <a href="#" class="btn btn-sm btn-primary">Lihat Web</a>
+                    <div class="card h-100 p-3">
+                        <div class="project-img-placeholder">Gambar</div>
+                        <h5 class="fw-bold text-primary">Sistem Informasi Perpustakaan</h5>
+                        <p class="small text-muted">Proyek Kuliah: Mengembangkan aplikasi manajemen perpustakaan berbasis web dengan fitur autentikasi pengguna dan manajemen database buku & pengguna. Menggunakan PHP, MySQL, dan AI Optimization.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary">PHP</span>
+                            <span class="badge bg-secondary">MySQL</span>
+                            <span class="badge bg-secondary">AI Development</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-primary w-100">Lihat Web</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="project-img-placeholder">Gambar</div>
+                        <h5 class="fw-bold text-success">Graphic & Web Design</h5>
+                        <p class="small text-muted">Fokus pada pembuatan desain UI yang minimalis, bersih, dan responsif, serta pembuatan desain grafis untuk memperkuat identitas dan komunikasi di media sosial.</p>
+                        <div class="mt-auto">
+                            <span class="badge bg-secondary">Canva</span>
+                            <span class="badge bg-secondary">Figma</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold text-success">Graphic & Web Design</h5>
-                            <p class="card-text small">Fokus pada UI minimalis, bersih, responsif, serta identitas visual untuk media sosial.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-secondary">Canva</span>
-                                <span class="badge bg-secondary">Figma</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold text-danger">Video Editing & Content</h5>
-                            <p class="card-text small">Produksi konten kreatif dengan CapCut/Premiere. Klik di bawah untuk melihat karya di Instagram.</p>
-                            <div class="d-grid gap-2">
-                                <a href="LINK_INSTAGRAM_1" class="btn btn-outline-danger btn-sm">Video 1</a>
-                                <a href="LINK_INSTAGRAM_2" class="btn btn-outline-danger btn-sm">Video 2</a>
-                            </div>
+                    <div class="card h-100 p-3">
+                        <div class="project-img-placeholder">Gambar</div>
+                        <h5 class="fw-bold text-danger">Video Editing & Content</h5>
+                        <p class="small text-muted">Memproduksi konten kreatif media sosial, mulai dari perencanaan ide hingga editing dasar. Fokus pada teknik pemotongan klip dan pemilihan audio.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-danger btn-sm">Video Instagram 1</a>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Video Instagram 2</a>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Video Instagram 3</a>
                         </div>
                     </div>
                 </div>
