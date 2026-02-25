@@ -2,20 +2,105 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Blog - Edukasi Malware</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Partogi Sitinjak</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { color: #2c3e50; }
-        .konten { text-align: justify; } /* Ini agar rata kiri-kanan sesuai permintaan Anda */
+        /* Samakan dengan gaya halaman utama Anda */
+        body {
+            font-family: 'Inter', sans-serif; /* Atau font yang Anda gunakan saat ini */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigasi Hitam seperti di gambar */
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        /* Konten Utama */
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Gaya Artikel Blog */
+        .blog-post {
+            margin-bottom: 40px;
+        }
+
+        .blog-post h2 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            text-align: justify; /* Rata kiri-kanan sesuai permintaan Anda */
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .date {
+            color: #999;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">← Kembali ke Daftar Blog</a>
-    <h1>Cara Terhindar dari Serangan Phishing</h1>
-    <p><em>Diposting pada: 25 Februari 2026</em></p>
-    <hr>
-    <div class="konten">
-        <p>Berdasarkan materi keamanan siber yang saya pelajari, phishing adalah salah satu ancaman paling berbahaya saat ini...</p>
-        </div>
+
+<header>
+    <div class="logo"><strong>G3</strong></div>
+    <nav>
+        <a href="index.html">Proyek</a>
+        <a href="about.html">Tentang Saya</a>
+        <a href="blog.html" style="color: white;">Blog</a> </nav>
+</header>
+
+<main>
+    <h1>Catatan & Blog</h1>
+
+    <article class="blog-post">
+        <span class="date">25 Februari 2026</span>
+        <h2>Analisis Penyakit Jantung dengan KNN</h2>
+        <p>
+            Dalam proyek data mining kali ini, saya mencoba mengimplementasikan algoritma K-Nearest Neighbors (KNN) 
+            untuk menganalisis dataset Heart Disease. Proses ini melibatkan pembersihan data menggunakan Jupyter 
+            Notebook dan pengujian akurasi...
+        </p>
+        <a href="blog/detail-knn.html">Baca selengkapnya...</a>
+    </article>
+
+    <article class="blog-post">
+        <span class="date">20 Februari 2026</span>
+        <h2>Edukasi Keamanan Siber: Bahaya Phishing</h2>
+        <p>
+            Kesadaran akan keamanan siber sangat penting di era digital. Serangan phishing seringkali memanfaatkan 
+            kelalaian pengguna melalui email palsu atau homograph attacks. Berikut adalah tips untuk tetap aman...
+        </p>
+        <a href="blog/detail-cybersecurity.html">Baca selengkapnya...</a>
+    </article>
+</main>
+
 </body>
 </html>
