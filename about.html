@@ -13,8 +13,8 @@
         .navbar-dark { background-color: #1c1e21 !important; }
         
         /* Profile Image Styling */
-        .img-container { position: relative; max-width: 350px; margin: 0 auto; }
-        .profile-img { transition: filter 0.3s ease; }
+        .img-container { max-width: 350px; margin: 0 auto; }
+        .profile-img { transition: filter 0.3s ease; filter: grayscale(20%); }
         .profile-img:hover { filter: grayscale(0%); }
 
         /* Typography */
@@ -26,9 +26,7 @@
             border-left: 5px solid #1c1e21;
             padding: 25px;
             border-radius: 0 10px 10px 0;
-            transition: all 0.3s ease;
         }
-        .quote-card:hover { background-color: #f1f3f5; }
 
         /* Social Links */
         .social-links a { 
@@ -63,13 +61,14 @@
 </nav>
 
 <main class="container py-5">
-    <div class="row g-5 align-items-start">
-        <div class="col-lg-4 text-center">
-            <div class="img-container mb-4">
-                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 shadow-sm profile-img">
-                <p class="mt-3 text-muted fw-bold">Partogi Sitinjak</p>
+    <div class="row g-lg-5 align-items-start">
+        <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+            <div class="img-container">
+                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 shadow-sm profile-img mb-3">
+                <h5 class="fw-bold mb-1">Partogi Sitinjak</h5>
+                <p class="text-muted small">Design Enthusiast & Tech Hobbyist</p>
                 
-                <button type="button" class="btn btn-dark w-100 mt-2 py-2" data-bs-toggle="modal" data-bs-target="#modalShorts">
+                <button type="button" class="btn btn-dark w-100 rounded-pill py-2 mt-2" data-bs-toggle="modal" data-bs-target="#modalShorts">
                     <i class="bi bi-play-circle-fill me-2"></i>Tonton Shorts Saya
                 </button>
             </div>
@@ -109,12 +108,6 @@
     </div>
 </main>
 
-<div class="col-lg-4 text-center">
-    <div class="mb-4 shadow-sm p-2 rounded-4 border">
-        <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 mb-3">
-        <h5 class="fw-bold mb-1">Partogi Sitinjak</h5>
-        <p class="text-muted small mb-3">Tech & Design Enthusiast</p>
-        
 <div class="modal fade" id="modalShorts" tabindex="-1" aria-hidden="true" style="z-index: 10000;">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
         <div class="modal-content bg-dark border-0 shadow-lg">
@@ -145,8 +138,9 @@
     modalShorts.addEventListener('hidden.bs.modal', function () {
         var iframe = modalShorts.querySelector('iframe');
         var url = iframe.src;
-        iframe.src = ""; iframe.src = url;
+        iframe.src = ""; iframe.src = url; // Stop video saat modal ditutup
     });
 </script>
+
 </body>
 </html>
