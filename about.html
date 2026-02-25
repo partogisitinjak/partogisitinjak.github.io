@@ -62,9 +62,9 @@
 
 <main class="container py-5">
     <div class="row g-lg-5 align-items-start">
-        <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
-            <div class="img-container">
-                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 shadow-sm profile-img mb-3">
+        <div class="col-lg-4 text-center text-lg-start mb-4">
+            <div class="img-container shadow-sm p-2 rounded-4 border bg-white">
+                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 mb-3 profile-img">
                 <h5 class="fw-bold mb-1">Partogi Sitinjak</h5>
                 <p class="text-muted small">Design Enthusiast & Tech Hobbyist</p>
                 
@@ -77,19 +77,8 @@
         <div class="col-lg-8">
             <div class="about-text">
                 <h2 class="fw-bold mb-4">Tentang saya</h2>
+                <p class="mb-4">Halo! Saya <strong>Partogi Sitinjak</strong>...</p>
                 
-                <p class="mb-4">
-                    Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" That's Simple! Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna. Percuma desain indah kalau emosi yang timbul malah kesal karena sulit digunakan, hahaha.
-                </p>
-
-                <p class="mb-4">
-                    Sedikit <em>intermezzo</em>, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> enggan kembali ke sebuah website setelah mendapatkan UX yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh" justru seringkali mengalihkan perhatian dari fungsi utamanya.
-                </p>
-
-                <p class="mb-5">
-                    Saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya mendatang.
-                </p>
-
                 <div class="quote-card mb-5 shadow-sm">
                     <p class="fst-italic mb-0 text-dark">
                         "Sesuatu yang sederhana seringkali menyampaikan lebih banyak cerita daripada yang ramai dan berisik."
@@ -100,7 +89,7 @@
                     <h6 class="fw-bold mb-3">Media Sosial</h6>
                     <div class="d-flex gap-4">
                         <a href="https://www.instagram.com/g3prg" target="_blank">Instagram</a>
-                        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -111,19 +100,20 @@
 <div class="modal fade" id="modalShorts" tabindex="-1" aria-hidden="true" style="z-index: 10000;">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
         <div class="modal-content bg-dark border-0 shadow-lg">
-            <div class="modal-header border-0 pb-0">
+            <div class="modal-header border-0 pb-0 text-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-3">
                 <div class="ratio ratio-9x16 bg-black rounded-3 overflow-hidden">
-                   <iframe 
+                    <iframe 
                         src="https://www.youtube.com/embed/J55hD06pqxc" 
                         title="YouTube Shorts" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen
-                        loading="lazy">
+                        sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation">
                     </iframe>
                 </div>
+                <p class="text-white-50 small text-center mt-2 mb-0">Jika video tidak muncul, silakan nonaktifkan AdBlock Anda.</p>
             </div>
         </div>
     </div>
@@ -139,7 +129,7 @@
     modalShorts.addEventListener('hidden.bs.modal', function () {
         var iframe = modalShorts.querySelector('iframe');
         var url = iframe.src;
-        iframe.src = ""; iframe.src = url; // Stop video saat modal ditutup
+        iframe.src = ""; iframe.src = url;
     });
 </script>
 
