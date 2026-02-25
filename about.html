@@ -7,49 +7,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #333; }
         .navbar-dark { background-color: #1c1e21 !important; }
-        
-        /* Profile Image Styling */
-        .img-container { max-width: 350px; margin: 0 auto; }
-        .profile-img { transition: filter 0.3s ease; filter: grayscale(20%); }
-        .profile-img:hover { filter: grayscale(0%); }
-
-        /* Typography */
         .about-text { text-align: justify; line-height: 1.8; font-size: 1.05rem; }
-        
-        /* Custom Quote */
-        .quote-card {
-            background-color: #f8f9fa;
-            border-left: 5px solid #1c1e21;
-            padding: 25px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        /* Social Links */
-        .social-links a { 
-            color: #666; 
-            transition: color 0.3s ease; 
-            font-weight: 600; 
-            text-decoration: none;
-        }
+        .quote-card { background-color: #f8f9fa; border-left: 5px solid #1c1e21; padding: 25px; border-radius: 0 10px 10px 0; }
+        .social-links a { color: #666; transition: color 0.3s ease; font-weight: 600; text-decoration: none; }
         .social-links a:hover { color: #000; }
-        
-        footer { font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="img.png" alt="Logo" width="45">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="index.html"><img src="img.png" alt="Logo" width="45"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Proyek</a></li>
@@ -61,13 +32,12 @@
 </nav>
 
 <main class="container py-5">
-    <div class="row g-lg-5 align-items-start">
+    <div class="row g-lg-5">
         <div class="col-lg-4 text-center text-lg-start mb-4">
-            <div class="img-container shadow-sm p-2 rounded-4 border bg-white">
-                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 mb-3 profile-img">
+            <div class="shadow-sm p-2 rounded-4 border bg-white">
+                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 mb-3">
                 <h5 class="fw-bold mb-1">Partogi Sitinjak</h5>
                 <p class="text-muted small">Design Enthusiast & Tech Hobbyist</p>
-                
                 <button type="button" class="btn btn-dark w-100 rounded-pill py-2 mt-2" data-bs-toggle="modal" data-bs-target="#modalShorts">
                     <i class="bi bi-play-circle-fill me-2"></i>Tonton Shorts Saya
                 </button>
@@ -76,15 +46,19 @@
 
         <div class="col-lg-8">
             <div class="about-text">
-                <h2 class="fw-bold mb-4">Tentang saya</h2>
-                <p class="mb-4">Halo! Saya <strong>Partogi Sitinjak</strong>...</p>
+              <h2 class="fw-bold mb-4">Tentang saya</h2>
                 
-                <div class="quote-card mb-5 shadow-sm">
-                    <p class="fst-italic mb-0 text-dark">
-                        "Sesuatu yang sederhana seringkali menyampaikan lebih banyak cerita daripada yang ramai dan berisik."
-                    </p>
-                </div>
+                <p class="mb-4">
+                    Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" That's Simple! Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna. Percuma desain indah kalau emosi yang timbul malah kesal karena sulit digunakan, hahaha.
+                </p>
 
+                <p class="mb-4">
+                    Sedikit <em>intermezzo</em>, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> enggan kembali ke sebuah website setelah mendapatkan UX yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh" justru seringkali mengalihkan perhatian dari fungsi utamanya.
+                </p>
+
+                <p class="mb-5">
+                    Saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya mendatang.
+                </p>
                 <div class="pt-4 border-top social-links">
                     <h6 class="fw-bold mb-3">Media Sosial</h6>
                     <div class="d-flex gap-4">
@@ -99,21 +73,13 @@
 
 <div class="modal fade" id="modalShorts" tabindex="-1" aria-hidden="true" style="z-index: 10000;">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
-        <div class="modal-content bg-dark border-0 shadow-lg">
-            <div class="modal-header border-0 pb-0 text-end">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+        <div class="modal-content bg-dark border-0">
+            <div class="modal-header border-0 pb-0"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
             <div class="modal-body p-3">
                 <div class="ratio ratio-9x16 bg-black rounded-3 overflow-hidden">
-                    <iframe 
-                        src="https://www.youtube.com/embed/J55hD06pqxc" 
-                        title="YouTube Shorts" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation allow-presentation">
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/J55hD06pqxc" title="YouTube Shorts" allowfullscreen></iframe>
                 </div>
-                <p class="text-white-50 small text-center mt-2 mb-0">Jika video tidak muncul, silakan nonaktifkan AdBlock Anda.</p>
+                <p class="text-white-50 small text-center mt-2 mb-0">Jika video hitam, mohon matikan AdBlock Anda.</p>
             </div>
         </div>
     </div>
@@ -128,10 +94,8 @@
     var modalShorts = document.getElementById('modalShorts');
     modalShorts.addEventListener('hidden.bs.modal', function () {
         var iframe = modalShorts.querySelector('iframe');
-        var url = iframe.src;
-        iframe.src = ""; iframe.src = url;
+        var url = iframe.src; iframe.src = ""; iframe.src = url;
     });
 </script>
-
 </body>
 </html>
