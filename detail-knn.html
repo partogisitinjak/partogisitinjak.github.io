@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek KNN | Partogi Sitinjak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #333; }
+        .content-section { text-align: justify; }
+        .code-block { background-color: #f4f4f4; padding: 15px; border-radius: 8px; font-family: monospace; overflow-x: auto; }
+        .navbar-dark { background-color: #1c1e21 !important; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">G3</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Proyek</a></li>
+                <li class="nav-item"><a class="nav-link" href="../about.html">Tentang Saya</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detail KNN</li>
+                </ol>
+            </nav>
+
+            <h1 class="fw-bold mb-4">Analisis Penyakit Jantung dengan Algoritma K-Nearest Neighbors (KNN)</h1>
+            <p class="text-muted">Oleh Partogi Sitinjak | 25 Februari 2026</p>
+            
+            <img src="https://via.placeholder.com/800x400" class="img-fluid rounded mb-4" alt="Ilustrasi Data Mining">
+
+            <div class="content-section">
+                <p>
+                    Proyek ini berfokus pada klasifikasi risiko penyakit jantung menggunakan dataset <strong>Heart_Disease.csv</strong>. 
+                    Algoritma yang digunakan adalah <strong>K-Nearest Neighbors (KNN)</strong>, sebuah metode yang mengklasifikasikan data berdasarkan 
+                    jarak terdekat dengan tetangganya.
+                </p>
+
+                <h3 class="fw-bold mt-4">Langkah-Langkah Implementasi:</h3>
+                <ul>
+                    <li><strong>Data Cleaning:</strong> Mengolah data yang hilang (missing values) menggunakan Python di Jupyter Notebook.</li>
+                    <li><strong>Feature Selection:</strong> Memilih variabel penting seperti usia, tekanan darah, dan kadar kolesterol.</li>
+                    <li><strong>Model Training:</strong> Menggunakan <code>Scikit-Learn</code> untuk melatih model dengan membagi data menjadi set pelatihan dan pengujian.</li>
+                </ul>
+
+                <h3 class="fw-bold mt-4">Potongan Kode Python:</h3>
+                <div class="code-block mb-4">
+                    <code>
+                        from sklearn.neighbors import KNeighborsClassifier<br>
+                        # Inisialisasi model dengan k=5<br>
+                        knn = KNeighborsClassifier(n_neighbors=5)<br>
+                        knn.fit(X_train, y_train)<br>
+                        print("Akurasi Model:", knn.score(X_test, y_test))
+                    </code>
+                </div>
+
+                <p>
+                    Hasil pengujian menunjukkan akurasi yang cukup baik. Proyek ini membuktikan bahwa pengolahan data yang tepat dapat membantu dalam 
+                    prediksi awal kondisi kesehatan seseorang melalui teknologi <strong>Data Mining</strong>.
+                </p>
+            </div>
+
+            <hr class="my-5">
+            <a href="blog.html" class="btn btn-dark"> Kembali ke Daftar Blog</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light py-4 border-top mt-5 text-center">
+    <p class="text-muted small">© 2026 Partogi Sitinjak. Built with Heart.</p>
+</footer>
+
+</body>
+</html>
