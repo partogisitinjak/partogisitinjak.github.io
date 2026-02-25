@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya | Partogi Sitinjak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        .profile-img { width: 100%; max-width: 350px; border-radius: 15px; filter: grayscale(20%); }
+        .quote-section {
+            background-color: #f8f9fa;
+            border-left: 8px solid #2c3e50;
+            padding: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        .social-links a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img.png" alt="Logo" width="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Proyek</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+    <main>
+    <h1>Catatan & Blog</h1>
+
+    <article class="post">
+        <span class="post-date">25 Februari 2026</span>
+        <h2 class="post-title">Analisis Penyakit Jantung dengan KNN</h2>
+        <p class="post-excerpt">
+            Dalam proyek data mining kali ini, saya mencoba mengimplementasikan algoritma K-Nearest Neighbors (KNN) 
+            untuk menganalisis dataset Heart Disease. Proses ini melibatkan pembersihan data menggunakan Jupyter 
+            Notebook dan pengujian akurasi untuk melihat performa model dalam klasifikasi kesehatan.
+        </p>
+        <a href="#" class="read-more">Baca selengkapnya...</a>
+    </article>
+
+    <article class="post">
+        <span class="post-date">20 Februari 2026</span>
+        <h2 class="post-title">Edukasi Keamanan Siber: Bahaya Phishing</h2>
+        <p class="post-excerpt">
+            Kesadaran akan keamanan siber sangat penting di era digital. Serangan phishing seringkali memanfaatkan 
+            kelalaian pengguna melalui email palsu atau homograph attacks. Berikut adalah tips untuk tetap aman 
+            saat beraktivitas di dunia maya.
+        </p>
+        <a href="#" class="read-more">Baca selengkapnya...</a>
+    </article>
+</main>
+
+</body>
+</html>
