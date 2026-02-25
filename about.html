@@ -5,36 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Saya | Partogi Sitinjak</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
-        .profile-img { width: 100%; max-width: 350px; border-radius: 15px; filter: grayscale(20%); }
-        .quote-section {
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #333; }
+        .navbar-dark { background-color: #1c1e21 !important; }
+        
+        /* Profile Image Styling */
+        .img-container { position: relative; max-width: 350px; margin: 0 auto; }
+        .profile-img { transition: filter 0.3s ease; }
+        .profile-img:hover { filter: grayscale(0%); }
+
+        /* Typography */
+        .about-text { text-align: justify; line-height: 1.8; font-size: 1.05rem; }
+        
+        /* Custom Quote */
+        .quote-card {
             background-color: #f8f9fa;
-            border-left: 8px solid #2c3e50;
-            padding: 30px;
-            margin: 40px 0;
-            font-style: italic;
-            font-size: 1.2rem;
+            border-left: 5px solid #1c1e21;
+            padding: 25px;
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
         }
-        .social-links a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
+        .quote-card:hover { background-color: #f1f3f5; }
+
+        /* Social Links */
+        .social-links a { 
+            color: #666; 
+            transition: color 0.3s ease; 
+            font-weight: 600; 
+            text-decoration: none;
+        }
+        .social-links a:hover { color: #000; }
+        
+        footer { font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="img.png" alt="Logo" width="50">
+            <img src="img.png" alt="Logo" width="45">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Proyek</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Tentang Saya</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             </ul>
         </div>
@@ -42,73 +63,79 @@
 </nav>
 
 <main class="container py-5">
-    <div class="row">
-        <div class="col-12">
-            <div class="float-md-start me-md-5 mb-4 text-center" style="max-width: 350px;">
-                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 shadow-sm mb-2">
-                <p class="text-muted small">Partogi Sitinjak</p>
+    <div class="row g-5 align-items-start">
+        <div class="col-lg-4 text-center">
+            <div class="img-container mb-4">
+                <img src="img5.png" alt="Partogi Sitinjak" class="img-fluid rounded-4 shadow-sm profile-img">
+                <p class="mt-3 text-muted fw-bold">Partogi Sitinjak</p>
+                
+                <button type="button" class="btn btn-dark w-100 mt-2 py-2" data-bs-toggle="modal" data-bs-target="#modalShorts">
+                    <i class="bi bi-play-circle-fill me-2"></i>Tonton Shorts Saya
+                </button>
             </div>
+        </div>
 
-<div class="about-text" style="text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #333;">
-    <h2 class="fw-bold mb-4">Tentang saya</h2>
-    
-    <p class="mb-4">
-        Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya atau point utama saya dalam mendesain ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" itu saja, That's Simple!. Salah satu diantaranya ialah berkeinginan mengembangkan antarmuka web yang minimalis, juga simpel (karna saya tidak terlalu suka antarmuka web/desain yang heboh, hahaha) dan tentunya <em>responsive</em> digunakan Pengguna. Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna, karena indah atau tidaknya kalau tidak bisa menyampaikan isi dari desain apapun dengan baik, ya percuma.. emosi emosi aja yang ada kan yang lihat, hahaha. Maka dengan latar belakang saya dalam membangun sistem informasi dan manajemen konten kreatif, saya sangat dan memiliki keinginan berdedikasi untuk terus menciptakan solusi digital yang inovatif, komunikatif, dan luwes.
-    </p>
+        <div class="col-lg-8">
+            <div class="about-text">
+                <h2 class="fw-bold mb-4">Tentang saya</h2>
+                
+                <p class="mb-4">
+                    Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" That's Simple! Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna. Percuma desain indah kalau emosi yang timbul malah kesal karena sulit digunakan, hahaha.
+                </p>
 
-    <p class="mb-4">
-        Sedikit <em>intermezzo</em> nih, di luar perkenalan saya tadi, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Kadang kita terlalu sibuk ingin terlihat canggih sampai lupa esensi utamanya: apakah orang nyaman menggunakannya? Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> kemungkinan besar tidak akan kembali ke sebuah website setelah mendapatkan pengalaman pengguna (UX) yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh Nan rame" justru seringkali mengalihkan perhatian dari fungsi utamanya. Makanya, hobi saya mengeksplorasi desain simpel itu sebenarnya cara saya untuk tetap waras di tengah dunia digital yang makin kompleks ini.
-    </p>
+                <p class="mb-4">
+                    Sedikit <em>intermezzo</em>, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> enggan kembali ke sebuah website setelah mendapatkan UX yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh" justru seringkali mengalihkan perhatian dari fungsi utamanya.
+                </p>
 
-    <p class="mb-5">
-        Maka dari itu intinya, saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Saya percaya selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya maupun proyek yang akan dibuat mendatang.
-    </p>
-</div>
+                <p class="mb-5">
+                    Saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya mendatang.
+                </p>
 
-                <div class="p-4 bg-light rounded-3 border-start border-primary border-5 mb-5 shadow-sm">
-                    <p class="fst-italic mb-0 text-secondary">
+                <div class="quote-card mb-5 shadow-sm">
+                    <p class="fst-italic mb-0 text-dark">
                         "Sesuatu yang sederhana seringkali menyampaikan lebih banyak cerita daripada yang ramai dan berisik."
                     </p>
+                </div>
+
+                <div class="pt-4 border-top social-links">
+                    <h6 class="fw-bold mb-3">Media Sosial</h6>
+                    <div class="d-flex gap-4">
+                        <a href="https://www.instagram.com/g3prg" target="_blank">Instagram</a>
+                        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</main>
 
-    <div class="modal fade" id="modalShorts" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
-        <div class="modal-content bg-dark">
+<div class="modal fade" id="modalShorts" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
+        <div class="modal-content bg-dark border-0">
             <div class="modal-header border-0">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-0">
                 <div class="ratio ratio-9x16">
-                    <iframe src="https://www.youtube.com/embed/J55hD06pqxc?si=lN6ItT35Eh_f7Ke9" title="YouTube Shorts" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/J55hD06pqxc" title="YouTube Shorts" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-    <div class="mt-5 pt-4 border-top">
-        <h6 class="fw-bold mb-3">Media Sosial</h6>
-        <div class="d-flex gap-4">
-            <a href="https://www.instagram.com/g3prg" class="text-decoration-none text-dark fw-bold">Instagram</a>
-            <a href="#" class="text-decoration-none text-dark fw-bold">LinkedIn</a>
-        </div>
-    </div>
-</main>
-    <footer class="text-center py-5 border-top mt-5">
-        <p class="text-muted">&copy; 2026 Partogi Sitinjak. Built with Heart.</p>
-    </footer>
+<footer class="text-center py-5 border-top">
+    <p class="text-muted mb-0">&copy; 2026 Partogi Sitinjak. Built with Heart.</p>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     var modalShorts = document.getElementById('modalShorts');
     modalShorts.addEventListener('hidden.bs.modal', function () {
         var iframe = modalShorts.querySelector('iframe');
         var url = iframe.src;
-        iframe.src = ""; 
-        iframe.src = url;
+        iframe.src = ""; iframe.src = url;
     });
-</script> 
+</script>
 </body>
 </html>
