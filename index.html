@@ -41,10 +41,10 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* Style Tambahan untuk Mini Game */
+        /* Style untuk Mini Game 3 Level */
         #mini-game .game-card { background: #ffffff; border: 1px solid #eee; }
-        .game-btn { transition: all 0.2s; border: 2px solid #eee !important; text-align: left; width: 100%; padding: 15px; }
-        .game-btn:hover { transform: translateX(5px); background: #f8f9fa; }
+        .game-btn { transition: all 0.2s; border: 2px solid #eee !important; text-align: left; width: 100%; padding: 15px; margin-bottom: 10px; }
+        .game-btn:hover:not([disabled]) { transform: translateX(5px); background: #f8f9fa; }
         .game-btn.correct { background-color: #d1e7dd !important; border-color: #a3cfbb !important; color: #0a3622 !important; }
         .game-btn.wrong { background-color: #f8d7da !important; border-color: #f1aeb5 !important; color: #58151c !important; }
     </style>
@@ -195,29 +195,42 @@
 
     <section id="mini-game" class="py-5 bg-dark text-white border-top border-secondary">
         <div class="container text-center">
-            <h2 class="fw-bold mb-3">🛡️ Mini Game: Keamanan Siber</h2>
-            <p class="text-white-50 mb-5">Sebagai *Tech Hobbyist*, saya ingin menguji ketelitianmu. Bisakah kamu membedakan link asli dan palsu?</p>
+            <h2 class="fw-bold mb-3">🛡️ Cybersecurity Challenge: 3 Level</h2>
+            <p class="text-white-50 mb-5">Uji ketelitianmu menghadapi ancaman siber (Homograf, Phishing, & Malware).</p>
             
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="card game-card p-4 rounded-4 shadow-lg text-dark">
-                        <h5 class="fw-bold mb-4">Kasus: Serangan Homograf</h5>
-                        <p class="text-muted small mb-4 text-start">Skenario: Kamu menerima pesan verifikasi dari bank. Klik link yang menurutmu **PALING AMAN**:</p>
-                        
-                        <div class="d-grid gap-3">
-                            <button class="btn btn-outline-dark game-btn" onclick="checkGame(false, this)">
-                                <span class="badge bg-secondary me-2">A</span>
-                                <code>https://www.bancmandırı.com/verifikasi</code>
-                            </button>
-                            
-                            <button class="btn btn-outline-dark game-btn" onclick="checkGame(true, this)">
-                                <span class="badge bg-secondary me-2">B</span>
-                                <code>https://www.bankmandiri.co.id/login</code>
-                            </button>
+                        <div id="level-1" class="game-level">
+                            <h5 class="fw-bold mb-4">Level 1: Serangan Homograf</h5>
+                            <p class="text-muted small mb-4 text-start">Pilih link perbankan yang **ASLI**:</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(1, false, this)">A. https://www.bancmandırı.com</button>
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(1, true, this)">B. https://www.bankmandiri.co.id</button>
+                            </div>
+                        </div>
+
+                        <div id="level-2" class="game-level d-none">
+                            <h5 class="fw-bold mb-4">Level 2: Phishing E-mail</h5>
+                            <p class="text-muted small mb-4 text-start">Mana alamat pengirim email "Hadiah" yang paling aman?</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(2, true, this)">A. support@layanan-resmi.com</button>
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(2, false, this)">B. admin-promo@free-gift-google.net</button>
+                            </div>
+                        </div>
+
+                        <div id="level-3" class="game-level d-none">
+                            <h5 class="fw-bold mb-4">Level 3: Deteksi Malware</h5>
+                            <p class="text-muted small mb-4 text-start">Mana ekstensi file tugas yang mencurigakan?</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(3, false, this)">A. Tugas_Kuliah.pdf.exe</button>
+                                <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(3, true, this)">B. Laporan_Final.zip</button>
+                            </div>
                         </div>
 
                         <div id="game-result" class="mt-4 p-3 rounded-3 d-none">
-                            <p id="game-message" class="mb-0 fw-bold small"></p>
+                            <p id="game-message" class="mb-2 fw-bold small"></p>
+                            <button id="next-level-btn" class="btn btn-primary btn-sm d-none" onclick="goToNextLevel()">Lanjut ke Level Berikutnya</button>
                         </div>
                     </div>
                 </div>
@@ -232,25 +245,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        function checkGame(isCorrect, element) {
+        let currentLevel = 1;
+        function checkAnswer(level, isCorrect, element) {
             const resultBox = document.getElementById('game-result');
             const message = document.getElementById('game-message');
-            const allButtons = document.querySelectorAll('.game-btn');
+            const nextBtn = document.getElementById('next-level-btn');
+            const currentButtons = document.querySelectorAll(`#level-${level} .game-btn`);
 
-            allButtons.forEach(btn => btn.disabled = true);
+            currentButtons.forEach(btn => btn.disabled = true);
             resultBox.classList.remove('d-none');
 
             if (isCorrect) {
                 element.classList.add('correct');
-                resultBox.classList.add('bg-success', 'bg-opacity-10');
-                message.innerHTML = "✅ TEPAT SEKALI! <br> Link B menggunakan domain resmi .co.id. Link A adalah serangan homograf karena menggunakan karakter 'ı' (tanpa titik).";
-                message.className = "mb-0 fw-bold small text-success";
+                message.className = "mb-2 fw-bold small text-success";
+                if (level === 1) message.innerHTML = "✅ Benar! Link B resmi .co.id. Link A pakai karakter 'ı' palsu.";
+                else if (level === 2) message.innerHTML = "✅ Tepat! Domain .net yang aneh seringkali phishing.";
+                else if (level === 3) message.innerHTML = "✅ Hebat! Ekstensi ganda (.pdf.exe) adalah tanda malware.";
+
+                if (level < 3) nextBtn.classList.remove('d-none');
+                else {
+                    message.innerHTML += "<br>🎉 Selamat! Kamu lulus semua tes keamanan siber!";
+                    nextBtn.classList.add('d-none');
+                }
             } else {
                 element.classList.add('wrong');
-                resultBox.classList.add('bg-danger', 'bg-opacity-10');
-                message.innerHTML = "❌ KAMU TERKECOH! <br> Perhatikan kembali Link A: 'bancmandırı'. Itu adalah serangan homograf yang menipu mata. Link B adalah yang asli.";
-                message.className = "mb-0 fw-bold small text-danger";
+                message.className = "mb-2 fw-bold small text-danger";
+                message.innerHTML = "❌ Salah! Perhatikan detail kecilnya. Coba lagi nanti ya!";
+                nextBtn.classList.add('d-none');
             }
+        }
+
+        function goToNextLevel() {
+            document.getElementById(`level-${currentLevel}`).classList.add('d-none');
+            currentLevel++;
+            document.getElementById(`level-${currentLevel}`).classList.remove('d-none');
+            document.getElementById('game-result').classList.add('d-none');
+            document.getElementById('next-level-btn').classList.add('d-none');
         }
     </script>
 
@@ -271,6 +301,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
