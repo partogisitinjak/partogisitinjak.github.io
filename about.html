@@ -6,18 +6,31 @@
     <title>Tentang Saya | Partogi Sitinjak</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
-        .profile-img { width: 100%; max-width: 350px; border-radius: 15px; filter: grayscale(20%); }
-        .quote-section {
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #333; }
+        .hero-nav { background-color: #1c1e21 !important; }
+        .about-text { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #333; }
+        
+        /* Styling Area Contact Us Baru */
+        .contact-section {
             background-color: #f8f9fa;
-            border-left: 8px solid #2c3e50;
-            padding: 30px;
-            margin: 40px 0;
-            font-style: italic;
-            font-size: 1.2rem;
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
         }
-        .social-links a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
+        .contact-section:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-color: #ddd;
+        }
+        .contact-link {
+            transition: transform 0.2s;
+            font-weight: 600;
+        }
+        .contact-link:hover {
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
@@ -30,7 +43,6 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Proyek</a></li>
@@ -49,42 +61,57 @@
                 <p class="text-muted small">Partogi Sitinjak</p>
             </div>
 
-<div class="about-text" style="text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #333;">
-    <h2 class="fw-bold mb-4">Tentang saya</h2>
-    
-    <p class="mb-4">
-        Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya atau point utama saya dalam mendesain ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" itu saja, That's Simple!. Salah satu diantaranya ialah berkeinginan mengembangkan antarmuka web yang minimalis, juga simpel (karna saya tidak terlalu suka antarmuka web/desain yang heboh, hahaha) dan tentunya <em>responsive</em> digunakan Pengguna. Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna, karena indah atau tidaknya kalau tidak bisa menyampaikan isi dari desain apapun dengan baik, ya percuma.. emosi emosi aja yang ada kan yang lihat, hahaha. Maka dengan latar belakang saya dalam membangun sistem informasi dan manajemen konten kreatif, saya sangat dan memiliki keinginan berdedikasi untuk terus menciptakan solusi digital yang inovatif, komunikatif, dan luwes.
-    </p>
+            <div class="about-text">
+                <h2 class="fw-bold mb-4">Tentang saya</h2>
+                
+                <p class="mb-4">
+                    Halo! Saya <strong>Partogi Sitinjak</strong>, seorang <em>Design Enthusiast</em> dan <em>Tech Hobbyist</em> yang memiliki ketertarikan mendalam dalam menggabungkan estetika desain dengan fungsionalitas teknologi. Fokus saya atau point utama saya dalam mendesain ialah "bagaimana suatu desain tersebut bisa tersampaikan dengan baik ke pengguna, tanpa memerlukan keestetikan yang berlebih?" itu saja, That's Simple!. Salah satu diantaranya ialah berkeinginan mengembangkan antarmuka web yang minimalis, juga simpel (karna saya tidak terlalu suka antarmuka web/desain yang heboh, hahaha) dan tentunya <em>responsive</em> digunakan Pengguna. Saya percaya bahwa setiap baris kode harus mampu memberikan pengalaman pengguna yang bermakna, karena indah atau tidaknya kalau tidak bisa menyampaikan isi dari desain apapun dengan baik, ya percuma.. emosi emosi aja yang ada kan yang lihat, hahaha. Maka dengan latar belakang saya dalam membangun sistem informasi dan manajemen konten kreatif, saya sangat dan memiliki keinginan berdedikasi untuk terus menciptakan solusi digital yang inovatif, komunikatif, dan luwes.
+                </p>
 
-    <p class="mb-4">
-        Sedikit <em>intermezzo</em> nih, di luar perkenalan saya tadi, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Kadang kita terlalu sibuk ingin terlihat canggih sampai lupa esensi utamanya: apakah orang nyaman menggunakannya? Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> kemungkinan besar tidak akan kembali ke sebuah website setelah mendapatkan pengalaman pengguna (UX) yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh Nan rame" justru seringkali mengalihkan perhatian dari fungsi utamanya. Makanya, hobi saya mengeksplorasi desain simpel itu sebenarnya cara saya untuk tetap waras di tengah dunia digital yang makin kompleks ini.
-    </p>
+                <p class="mb-4">
+                    Sedikit <em>intermezzo</em> nih, di luar perkenalan saya tadi, saya tipe orang yang lebih menghargai "kejujuran" dalam sebuah karya. Kadang kita terlalu sibuk ingin terlihat canggih sampai lupa esensi utamanya: apakah orang nyaman menggunakannya? Berdasarkan data riset dari <strong>Amazon Web Services (AWS)</strong>, terungkap bahwa sekitar <strong>88% pengunjung</strong> kemungkinan besar tidak akan kembali ke sebuah website setelah mendapatkan pengalaman pengguna (UX) yang buruk. Hal ini memperkuat prinsip saya bahwa desain yang terlalu "heboh Nan rame" justru seringkali mengalihkan perhatian dari fungsi utamanya. Makanya, hobi saya mengeksplorasi desain simpel itu sebenarnya cara saya untuk tetap waras di tengah dunia digital yang makin kompleks ini.
+                </p>
 
-    <p class="mb-5">
-        Maka dari itu intinya, saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Saya percaya selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya maupun proyek yang akan dibuat mendatang.
-    </p>
-</div>
+                <p class="mb-5">
+                    Maka dari itu intinya, saya sangat senang jika bisa berkolaborasi atau sekadar berdiskusi tentang bagaimana teknologi dan desain bisa berjalan beriringan tanpa harus saling mengalahkan. Saya percaya selalu ada ruang untuk belajar hal baru, dan saya siap membawa energi kreatif itu ke dalam setiap karya maupun proyek yang akan dibuat mendatang.
+                </p>
+            </div>
 
-                <div class="p-4 bg-light rounded-3 border-start border-primary border-5 mb-5 shadow-sm">
-                    <p class="fst-italic mb-0 text-secondary">
-                        "Sesuatu yang sederhana seringkali menyampaikan lebih banyak cerita daripada yang ramai dan berisik."
-                    </p>
-                </div>
+            <div class="p-4 bg-light rounded-3 border-start border-primary border-5 mb-5 shadow-sm">
+                <p class="fst-italic mb-0 text-secondary">
+                    "Sesuatu yang sederhana seringkali menyampaikan lebih banyak cerita daripada yang ramai dan berisik."
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="mt-5 pt-4 border-top">
-        <h6 class="fw-bold mb-3">Media Sosial</h6>
-        <div class="d-flex gap-4">
-            <a href="https://www.instagram.com/g3prg" class="text-decoration-none text-dark fw-bold">Instagram</a>
-            <a href="#" class="text-decoration-none text-dark fw-bold">LinkedIn</a>
+    <div class="contact-section mt-5 shadow-sm">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h4 class="fw-bold mb-2">Mari Terhubung!</h4>
+                <p class="text-muted mb-4 mb-md-0">Punya pertanyaan atau ingin berdiskusi? Jangan ragu untuk menghubungi saya melalui platform berikut.</p>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex flex-wrap gap-3 justify-content-md-end">
+                    <a href="https://www.instagram.com/g3prg" target="_blank" class="btn btn-dark rounded-pill px-4 contact-link">
+                        <i class="bi bi-instagram me-2"></i>Instagram
+                    </a>
+                    <a href="#" target="_blank" class="btn btn-outline-dark rounded-pill px-4 contact-link">
+                        <i class="bi bi-linkedin me-2"></i>LinkedIn
+                    </a>
+                    <a href="mailto:partogisitinjakk@gmail.com" class="btn btn-primary rounded-pill px-4 contact-link">
+                        <i class="bi bi-envelope-at me-2"></i>Email
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </main>
-<footer class="bg-dark text-white text-center py-4">
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
     <p class="mb-0">&copy; 2026 Partogi Sitinjak. Built with Heart.</p>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
