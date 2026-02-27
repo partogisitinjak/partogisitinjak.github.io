@@ -43,11 +43,57 @@
     <header class="hero-section text-center">
         <div class="container">
             <h1 class="display-3 fw-bold">Partogi Sitinjak</h1>
-            <p class="lead">Design Enthusiast | Junior Editor| Tech Hobbyist</p>
+            <p class="lead">Design Enthusiast | Junior Editor | Tech Hobbyist</p>
             <a href="#proyek" class="btn btn-outline-light btn-lg mt-3">Lihat Portofolio</a>
             <p class="lead">Web ini sedang dalam pengembangan, terima kasih!</p>
         </div>
     </header>
+
+<section class="container py-5">
+    <h3 class="fw-bold mb-4">Dokumentasi Proyek</h3>
+    
+    <div id="galleryCarousel" class="carousel slide shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="foto-film.jpg" class="d-block w-100" alt="Jalan Pulang" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="fw-bold">Produksi Film "Jalan Pulang"</h5>
+                    <p>Momen persiapan script reading dan riset audio.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="foto-server.jpg" class="d-block w-100" alt="Debian Server" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="fw-bold">Web Server Setup</h5>
+                    <p>Konfigurasi Debian pada laptop Toshiba dengan router ZTE & TP-Link.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="foto-starsjc.jpg" class="d-block w-100" alt="StarsJC Content" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="fw-bold">Manajemen Konten StarsJC</h5>
+                    <p>Adaptasi tren populer untuk audiens gereja dan pemuda.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</section>
 
 <section id="proyek" class="py-5 bg-light">
     <div class="container">
@@ -151,6 +197,7 @@
 </div>
 </body>
 </html>
+
 
 
 
