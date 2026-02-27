@@ -17,6 +17,29 @@
         .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; }
         .card:hover { transform: translateY(-10px); }
         .project-img-placeholder { background: #ddd; height: 150px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #666; }
+        }
+    .running-text-container {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .running-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+    }
+    .running-text span {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+    @keyframes marquee {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
     </style>
 </head>
 <body>
@@ -45,8 +68,11 @@
             <h1 class="display-3 fw-bold">Partogi Sitinjak</h1>
             <p class="lead">Design Enthusiast | Junior Editor | Tech Hobbyist</p>
             <a href="#proyek" class="btn btn-outline-light btn-lg mt-3">Lihat Portofolio</a>
-            <p class="lead">Web ini sedang dalam pengembangan, terima kasih!</p>
-        </div>
+            <div class="running-text-container bg-dark py-2">
+            <div class="running-text">
+                <span>Web ini sedang dalam pengembangan, terima kasih! &nbsp;&nbsp; • &nbsp;&nbsp; Web ini sedang dalam pengembangan, terima kasih! &nbsp;&nbsp; • &nbsp;&nbsp; Web ini sedang dalam pengembangan, terima kasih!</span>
+    </div>
+</div>
     </header>
 
 <section class="container py-5">
@@ -204,6 +230,7 @@
 </div>
 </body>
 </html>
+
 
 
 
