@@ -40,6 +40,13 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
+        /* Style Tambahan untuk Mini Game */
+        #mini-game .game-card { background: #ffffff; border: 1px solid #eee; }
+        .game-btn { transition: all 0.2s; border: 2px solid #eee !important; text-align: left; width: 100%; padding: 15px; }
+        .game-btn:hover { transform: translateX(5px); background: #f8f9fa; }
+        .game-btn.correct { background-color: #d1e7dd !important; border-color: #a3cfbb !important; color: #0a3622 !important; }
+        .game-btn.wrong { background-color: #f8d7da !important; border-color: #f1aeb5 !important; color: #58151c !important; }
     </style>
 </head>
 <body>
@@ -186,11 +193,66 @@
         </div>
     </section>
 
+    <section id="mini-game" class="py-5 bg-dark text-white border-top border-secondary">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">🛡️ Mini Game: Keamanan Siber</h2>
+            <p class="text-white-50 mb-5">Sebagai *Tech Hobbyist*, saya ingin menguji ketelitianmu. Bisakah kamu membedakan link asli dan palsu?</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card game-card p-4 rounded-4 shadow-lg text-dark">
+                        <h5 class="fw-bold mb-4">Kasus: Serangan Homograf</h5>
+                        <p class="text-muted small mb-4 text-start">Skenario: Kamu menerima pesan verifikasi dari bank. Klik link yang menurutmu **PALING AMAN**:</p>
+                        
+                        <div class="d-grid gap-3">
+                            <button class="btn btn-outline-dark game-btn" onclick="checkGame(false, this)">
+                                <span class="badge bg-secondary me-2">A</span>
+                                <code>https://www.bancmandırı.com/verifikasi</code>
+                            </button>
+                            
+                            <button class="btn btn-outline-dark game-btn" onclick="checkGame(true, this)">
+                                <span class="badge bg-secondary me-2">B</span>
+                                <code>https://www.bankmandiri.co.id/login</code>
+                            </button>
+                        </div>
+
+                        <div id="game-result" class="mt-4 p-3 rounded-3 d-none">
+                            <p id="game-message" class="mb-0 fw-bold small"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-dark text-white text-center py-4">
         <p class="mb-0">&copy; 2026 Partogi Sitinjak. Built with Heart.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function checkGame(isCorrect, element) {
+            const resultBox = document.getElementById('game-result');
+            const message = document.getElementById('game-message');
+            const allButtons = document.querySelectorAll('.game-btn');
+
+            allButtons.forEach(btn => btn.disabled = true);
+            resultBox.classList.remove('d-none');
+
+            if (isCorrect) {
+                element.classList.add('correct');
+                resultBox.classList.add('bg-success', 'bg-opacity-10');
+                message.innerHTML = "✅ TEPAT SEKALI! <br> Link B menggunakan domain resmi .co.id. Link A adalah serangan homograf karena menggunakan karakter 'ı' (tanpa titik).";
+                message.className = "mb-0 fw-bold small text-success";
+            } else {
+                element.classList.add('wrong');
+                resultBox.classList.add('bg-danger', 'bg-opacity-10');
+                message.innerHTML = "❌ KAMU TERKECOH! <br> Perhatikan kembali Link A: 'bancmandırı'. Itu adalah serangan homograf yang menipu mata. Link B adalah yang asli.";
+                message.className = "mb-0 fw-bold small text-danger";
+            }
+        }
+    </script>
 
     <div class="modal fade" id="modalImg3" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
