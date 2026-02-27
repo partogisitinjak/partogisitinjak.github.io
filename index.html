@@ -195,15 +195,15 @@
 
     <section id="mini-game" class="py-5 bg-dark text-white border-top border-secondary">
         <div class="container text-center">
-            <h2 class="fw-bold mb-3">🛡️ Cybersecurity Challenge: 3 Level</h2>
+            <h2 class="fw-bold mb-3">Cybersecurity Quiz</h2>
             <p class="text-white-50 mb-5">Uji ketelitianmu menghadapi ancaman siber (Homograf, Phishing, & Malware).</p>
             
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="card game-card p-4 rounded-4 shadow-lg text-dark">
                         <div id="level-1" class="game-level">
-                            <h5 class="fw-bold mb-4">Level 1: Serangan Homograf</h5>
-                            <p class="text-muted small mb-4 text-start">Pilih link perbankan yang **ASLI**:</p>
+                            <h5 class="fw-bold mb-4">Serangan Homograf</h5>
+                            <p class="text-muted small mb-4 text-start">Pilih link perbankan yang ASLI:</p>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(1, false, this)">A. https://www.bancmandırı.com</button>
                                 <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(1, true, this)">B. https://www.bankmandiri.co.id</button>
@@ -211,7 +211,7 @@
                         </div>
 
                         <div id="level-2" class="game-level d-none">
-                            <h5 class="fw-bold mb-4">Level 2: Phishing E-mail</h5>
+                            <h5 class="fw-bold mb-4">Phishing E-mail</h5>
                             <p class="text-muted small mb-4 text-start">Mana alamat pengirim email "Hadiah" yang paling aman?</p>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(2, true, this)">A. support@layanan-resmi.com</button>
@@ -220,7 +220,7 @@
                         </div>
 
                         <div id="level-3" class="game-level d-none">
-                            <h5 class="fw-bold mb-4">Level 3: Deteksi Malware</h5>
+                            <h5 class="fw-bold mb-4">Mendeteksi Malware</h5>
                             <p class="text-muted small mb-4 text-start">Mana ekstensi file tugas yang mencurigakan?</p>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-outline-dark game-btn" onclick="checkAnswer(3, false, this)">A. Tugas_Kuliah.pdf.exe</button>
@@ -230,7 +230,7 @@
 
                         <div id="game-result" class="mt-4 p-3 rounded-3 d-none">
                             <p id="game-message" class="mb-2 fw-bold small"></p>
-                            <button id="next-level-btn" class="btn btn-primary btn-sm d-none" onclick="goToNextLevel()">Lanjut ke Level Berikutnya</button>
+                            <button id="next-level-btn" class="btn btn-primary btn-sm d-none" onclick="goToNextLevel()">Lanjut ke Bagian Berikutnya</button>
                         </div>
                     </div>
                 </div>
